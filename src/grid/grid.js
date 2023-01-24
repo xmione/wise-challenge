@@ -20,10 +20,34 @@ function DisplayGrid(props) {
         { field: 'totalDelegatorRewards', headerName: 'Total Delegator Rewards', width: 150 },
     ];
 
+    //Note: Editing is not part of the specs so I'll not include these lines of codes for now.
+    //experimentalFeatures={{ newEditingApi: true }}
+    //editMode = "row"
 
     return (
-        <div style={{ height: 400, width: '100%' }}>
-            <DataGrid rows={rows} columns={columns} />
+        <div style={{ height: 800, width: '100%' }}>
+            <DataGrid
+                rows={rows}
+                columns={[...columns, { field: 'id', filterable: false }]}
+                initialState={{
+                    columns: {
+                        columnVisibilityModel: {
+                            // Hide column id, the other columns will remain visible
+                            id: false,
+                        },
+                    },
+                }}
+                sx={{
+                    backgroundColor: 'white',
+                    boxShadow: 2,
+                    border: 2,
+                    borderColor: 'primary.light',
+                    '& .MuiDataGrid-cell:hover': {
+                        color: 'primary.main',
+                    },
+                }}
+                
+            />
         </div>
     );
 }
