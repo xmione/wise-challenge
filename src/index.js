@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { InMemoryCache, ApolloClient, ApolloProvider} from '@apollo/client';
 
+const client = new ApolloClient({
+    //uri: 'https://flyby-gateway.herokuapp.com/',
+    uri: 'https://api.thegraph.com/subgraphs/name/graphprotocol/graph-network-mainnet',
+    cache: new InMemoryCache(),
+});
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <ApolloProvider client={client}>
+        <App />
+    </ApolloProvider>,
   document.getElementById('root')
 );
 
