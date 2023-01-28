@@ -5,9 +5,7 @@ import DisplaySubGraphs from './apollo/queries'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
         <DisplaySubGraphs/>
-      </header>
     </div>
   );
 }

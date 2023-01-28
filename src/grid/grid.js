@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
 
+
 function DisplayGrid(props) {
-    debugger;
+
     const rows: GridRowsProp = props.data;
     const columns: GridColDef[] = [
         { field: 'id', headerName: 'ID', width: 25 },

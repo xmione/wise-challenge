@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\Apollo"
+    "\\src\\grid"
   ],
-  "SelectedNode": "\\src\\Apollo\\queries.js",
+  "SelectedNode": "\\src\\grid",
   "PreviewInSolutionExplorer": false
 }
